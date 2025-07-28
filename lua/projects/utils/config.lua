@@ -15,8 +15,7 @@ M.defaults = {
   },
 
   -- specify a custom function to run on project selection
-  on_open = {},
-  -- on_open = {} function(project)
+  on_open = function() end,
   --   vim.cmd(":Neotree")
   -- end,
 
