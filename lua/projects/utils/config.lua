@@ -4,18 +4,21 @@ local M = {}
 M.defaults = {
   -- directories to search for projects
   directories = {
-    {
-      dir = "~/development",
-      ignore_hidden = true,
-      ignore_parent = true,
-      search_depth = 1,
-    },
+  --  {
+  --    dir = "~/development",
+  --    ignore_hidden = true,
+  --    ignore_parent = true,
+  --    search_depth = 1,
+  --  },
+  --  "/path/to/directory",
+  --  "/path/to/another/directory",
   },
 
   -- specify a custom function to run on project selection
-  on_open = function(project)
-    vim.cmd(":Neotree")
-  end,
+  on_open = {}
+  -- on_open = {} function(project)
+  --   vim.cmd(":Neotree")
+  -- end,
 
   -- highlight group matched characters
   layout = {
