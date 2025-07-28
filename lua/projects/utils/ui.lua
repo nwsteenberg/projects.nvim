@@ -22,7 +22,7 @@ end
 function M.open_folder_from_menu(menu, options)
   local pos = vim.api.nvim_win_get_cursor(menu.winid)[1]
   local selected_project = vim.api.nvim_buf_get_lines(menu.bufnr, 0, -1, false)[pos]
-  vim.cmd("cd " .. selected_project)
+  vim.api.nvim_set_current_dir(selected_project)
   -- Run function from config if specified:
   if options.on_open then
     options.on_open(selected_project)
