@@ -15,9 +15,9 @@ M.defaults = {
   },
 
   -- specify a custom function to run on project selection
-  on_open = function() end,
-  --   vim.cmd(":Neotree")
-  -- end,
+  on_open = function(project)
+     vim.cmd(":Neotree")
+  end,
 
   -- highlight group matched characters
   layout = {
